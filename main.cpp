@@ -2,6 +2,7 @@
 #include <vector>
 #include "easy/TwoSum/TwoSum.h"
 #include "easy/ReverseInteger/ReverseInteger.h"
+#include "easy/PalindromeNumber/PalindromeNumber.h"
 
 using namespace std;
 void twoSum(){
@@ -23,10 +24,18 @@ void reverseInteger(){
     int result = reverseInteger.reverse(num);
     cout<<"reverse  = "<<result<<"\n";
 }
+void palindromeNumber(){
+    PalindromeNumber palindromeNumber1;
+    int num = 1;
+    cout<<"inside palindromeNumber: \n";
+    bool result = palindromeNumber1.isPalindrome(num);
+    cout<<"is palindrome "<<num<<"= "<<result<<"\n";
+}
 int main() {
     std::cout << "Hello, World!" << std::endl;
     twoSum();
     reverseInteger();
+    palindromeNumber();
 
     return 0;
 }
