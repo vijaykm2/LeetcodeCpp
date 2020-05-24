@@ -3,4 +3,4 @@ project(LeetCodeCpp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(LeetCodeCpp main.cpp easy/TwoSum/TwoSum.cpp easy/ReverseInteger/ReverseInteger.cpp easy/ReverseInteger/ReverseInteger.h easy/PalindromeNumber/PalindromeNumber.cpp easy/PalindromeNumber/PalindromeNumber.h)
+add_executable(LeetCodeCpp main.cpp easy/TwoSum/TwoSum.cpp easy/ReverseInteger/ReverseInteger.cpp easy/ReverseInteger/ReverseInteger.h easy/PalindromeNumber/PalindromeNumber.cpp easy/PalindromeNumber/PalindromeNumber.h easy/RomanToInt.cpp easy/RomanToInt.h easy/LongestCommonPrefix/LongestCommonPrefix.cpp)

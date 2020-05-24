@@ -3,6 +3,8 @@
 #include "easy/TwoSum/TwoSum.h"
 #include "easy/ReverseInteger/ReverseInteger.h"
 #include "easy/PalindromeNumber/PalindromeNumber.h"
+#include "easy/LongestCommonPrefix/LongestCommonPrefix.cpp"
+#include "easy/RomanToInt.h"
 
 using namespace std;
 void twoSum(){
@@ -31,11 +33,27 @@ void palindromeNumber(){
     bool result = palindromeNumber1.isPalindrome(num);
     cout<<"is palindrome "<<num<<"= "<<result<<"\n";
 }
+void romanToInt(){
+    cout << "Executing romanToInt\n";
+    RomanToInt romanToInt1;
+    string string1 = "LVIII";
+    int result = romanToInt1.romanToInt(string1);
+    cout<< "roman toint of "<< string1<< " = "<< result<<"\n";
+}
+void longestPrefix() {
+    cout<<"Executing longestprefix: \n";
+    LongestCommonPrefix longestprefix;
+    vector<string> strs = {"abc", "abcd"};
+    string result = longestprefix.longestCommonPrefix(strs);
+    cout << result<<endl;
+}
 int main() {
     std::cout << "Hello, World!" << std::endl;
     twoSum();
     reverseInteger();
     palindromeNumber();
+    romanToInt();
+    longestPrefix();
 
     return 0;
 }
