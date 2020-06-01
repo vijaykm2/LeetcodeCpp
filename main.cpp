@@ -5,6 +5,9 @@
 #include "easy/PalindromeNumber/PalindromeNumber.h"
 #include "easy/LongestCommonPrefix/LongestCommonPrefix.cpp"
 #include "easy/RomanToInt.h"
+#include "easy/ValidParenthesis.cpp"
+#include "easy/MergeTwoSortedLists.h"
+#include "RemoveDuplicates.h"
 
 using namespace std;
 void twoSum(){
@@ -47,6 +50,44 @@ void longestPrefix() {
     string result = longestprefix.longestCommonPrefix(strs);
     cout << result<<endl;
 }
+void validParens(){
+    ValidParenthesis validParenthesis;
+    bool isValid = validParenthesis.isValid("{}");
+    cout << "paren {} is: "<< isValid<<"\n";
+     isValid = validParenthesis.isValid("(]");
+    cout << "paren (] is: "<< isValid<<"\n";
+     isValid = validParenthesis.isValid("{[]}");
+    cout << "paren {[]} is: "<< isValid<<"\n";
+     isValid = validParenthesis.isValid("((");
+    cout << "paren {[]} is: "<< isValid<<"\n";
+     isValid = validParenthesis.isValid("){");
+    cout << "paren ){ is: "<< isValid<<"\n";
+
+}
+ListNode* createListNode(vector<int> values){
+    ListNode result;
+    ListNode* resultNext = &result;
+    for(vector<int>::iterator itr = values.begin();itr!=values.end();++itr){
+        resultNext->next = new ListNode(*itr);
+        resultNext = resultNext ->next;
+    }
+    return result.next;
+}
+
+void merge2Lists(){
+    MergeTwoSortedLists merge2Lists;
+    ListNode* l1 = createListNode({1,2,4});
+    ListNode* l2 = createListNode({1,3,4}) ;
+    ListNode* result = merge2Lists.mergeTwoLists(l1, l2);
+    cout << "\nMerged 2 lists \n";
+}
+void removeDuplicates(){
+    cout<<"inside removeDuplicates\n";
+    vector<int> nums = {1, 1};
+    RemoveDuplicates removeDuplicates1;
+    int result = removeDuplicates1.removeDuplicates(nums);
+    cout << "length without dups = "<<result <<"\n";
+}
 int main() {
     std::cout << "Hello, World!" << std::endl;
     twoSum();
@@ -54,6 +95,8 @@ int main() {
     palindromeNumber();
     romanToInt();
     longestPrefix();
-
+    validParens();
+    merge2Lists();
+    removeDuplicates();
     return 0;
 }

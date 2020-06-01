@@ -1,2 +1,8 @@
 cmake-build-debug
 .idea
+CMakeFiles
+Makefile
+LeetCodeCpp
+LeetCodeCpp.cbp
+cmake_install.cmake
+CMakeCache.txt
